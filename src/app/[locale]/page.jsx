@@ -1,7 +1,10 @@
+'use client'
 import {useTranslations} from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation'
  
 export default function HomePage() {
-    
+      const router = useRouter();
+  const pathname = usePathname();
     const handleChange = (newLocale) => {
     
     const segments = pathname.split("/");
@@ -17,7 +20,7 @@ export default function HomePage() {
   return <>
   
   <h1>{t('title')}</h1>
-  <select name="" className='text-white' onChange={(e)=>handleChange(e.target.value)} id="">
+  <select name="" className='' onChange={(e)=>handleChange(e.target.value)} id="">
     <option value="en">en</option>
     <option value="ru">ru</option>
   </select>
