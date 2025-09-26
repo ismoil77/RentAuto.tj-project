@@ -1,4 +1,6 @@
 'use client'
+import SectionHome from '@/components/section1'
+import SectionCatalog from '@/components/section2.jsx/section2'
 import {useTranslations} from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation'
  
@@ -24,5 +26,8 @@ export default function HomePage() {
     <option value="en">en</option>
     <option value="ru">ru</option>
   </select>
+  <SectionHome/>
+  <SectionCatalog/>
+
   </>;
 }
