@@ -1,5 +1,32 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "missionTitle": "Our Mission and Values",
+    "missionDescription": "Our goal is to make car rental simple, affordable, and reliable for everyone. We aim to provide the best service by bringing verified car rental providers and quality vehicles onto one platform.",
+    "reliability": "Reliability",
+    "reliabilityDesc": "We work only with verified partners and guarantee the condition of every vehicle.",
+    "speed": "Speed",
+    "speedDesc": "Fast and convenient online booking in just a few minutes.",
+    "transparency": "Transparency",
+    "transparencyDesc": "No hidden fees. All rental terms are clear and accessible.",
+    "comfort": "Comfort",
+    "comfortDesc": "A wide selection of premium-class vehicles for your convenience.",
+    "historyTitle": "Our Story",
+    "historySubtitle": "From idea to Tajikistan’s leading car rental aggregator.",
+    "idea": "September 2025 – The Idea is Born",
+    "ideaDesc": "The idea emerged to create a unified platform for renting premium and sports cars in Tajikistan.",
+    "launch": "October 2025 – RentAuto.tj Launch",
+    "launchDesc": "Official platform launch with the first 50 cars in the catalog.",
+    "future": "Future – New Horizons",
+    "futureDesc": "Plans to expand the fleet, enter new regions, and introduce innovative services."
+  },
+  "SectionHome": {
+    "heroTitlePrefix": "Rent a car of any class in ",
+    "heroTitleHighlight": "Tajikistan",
+    "heroSubtitle": "RentAuto.tj — your car rental aggregator. Sports cars, sedans, SUVs, and electric vehicles — all in one place.",
+    "cityPlaceholder": "City",
+    "carPlaceholder": "Make/Model",
+    "datesPlaceholder": "Rental Dates",
+    "searchButton": "Find a car"
   }
 }

@@ -9,7 +9,7 @@ export default function Navbar() {
 	return (
 		<div className='bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark'>
 			<div className='flex flex-col'>
-				<header className='fixed w-full top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm '>
+				<header className='fixed w-full top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm '>
 					<div className='container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3'>
 						<Link className='flex items-center gap-3' href='/'>
 							{/* <svg
@@ -51,7 +51,7 @@ export default function Navbar() {
 								Контакты
 							</Link>
 						</nav>
-						<div className='flex items-center gap-4'>
+						<div className='flex items-center gap-4 mr-[60px]'>
 							<button className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors'>
 								<span>Войти</span>
 							</button>
