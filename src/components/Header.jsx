@@ -64,14 +64,13 @@ export default function Navbar() {
 
 						<div className='flex items-center gap-4 ml-[15px] mr-[60px]'>
 							<button
-								disabled={!!localStorage.getItem('access_token')}
-								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+								
+								className='bg-[#0c7ff2] max-sm:hidden text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
 							>
-								<Link href={!localStorage.getItem('access_token') ? '/login' : '#'}>
+								<Link href={'/login'}>
 									<span>
-										{localStorage.getItem('access_token')
-											? t('loggedIn')
-											: t('login')}
+										
+											{ t('login')}
 									</span>
 								</Link>
 							</button>
@@ -83,7 +82,7 @@ export default function Navbar() {
 							</button>
 
 							<button
-								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors max-sm:hidden'
+								className=' bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors max-sm:hidden'
 								onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 							>
 								{theme === 'dark' ? t('darkMode') : t('lightMode')}
@@ -91,7 +90,7 @@ export default function Navbar() {
 
 							<button
 								onClick={toggleMenu}
-								className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary max-sm:mr-2 '
+								className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary absolute right-4'
 							>
 								<svg
 									className='h-6 w-6'

@@ -38,9 +38,7 @@ export default function contact() {
 							<div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center'>
 								<div className='flex flex-col items-center'>
 									<div className='flex items-center justify-center h-16 w-16 rounded-xl bg-primary/10 text-primary mb-4'>
-										<span className='material-symbols-outlined text-3xl'>
-											verified_user
-										</span>
+									
 									</div>
 									<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
 										Надежность
@@ -52,9 +50,7 @@ export default function contact() {
 								</div>
 								<div className='flex flex-col items-center'>
 									<div className='flex items-center justify-center h-16 w-16 rounded-xl bg-primary/10 text-primary mb-4'>
-										<span className='material-symbols-outlined text-3xl'>
-											speed
-										</span>
+										
 									</div>
 									<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
 										Скорость
@@ -65,9 +61,7 @@ export default function contact() {
 								</div>
 								<div className='flex flex-col items-center'>
 									<div className='flex items-center justify-center h-16 w-16 rounded-xl bg-primary/10 text-primary mb-4'>
-										<span className='material-symbols-outlined text-3xl'>
-											visibility
-										</span>
+									
 									</div>
 									<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
 										Прозрачность
@@ -79,9 +73,7 @@ export default function contact() {
 								</div>
 								<div className='flex flex-col items-center'>
 									<div className='flex items-center justify-center h-16 w-16 rounded-xl bg-primary/10 text-primary mb-4'>
-										<span className='material-symbols-outlined text-3xl'>
-											chair
-										</span>
+									
 									</div>
 									<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
 										Комфорт
@@ -94,7 +86,7 @@ export default function contact() {
 							</div>
 						</div>
 					</section>
-					<section className='py-16 sm:py-24 bg-background-light dark:bg-gray-900/50'>
+					{/* <section className='py-16 sm:py-24 bg-background-light dark:bg-gray-900/50'>
 						<div className='container mx-auto px-6'>
 							<div className='max-w-4xl mx-auto text-center mb-16'>
 								<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white'>
@@ -134,7 +126,7 @@ export default function contact() {
 								</div>
 							</div>
 						</div>
-					</section>
+					</section> */}
 					<section className='py-16 sm:py-24 bg-white dark:bg-background-dark'>
 						<div className='container mx-auto px-6'>
 							<div className='max-w-4xl mx-auto text-center mb-16'>

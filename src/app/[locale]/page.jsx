@@ -6,6 +6,7 @@ import SectionHome from '@/components/section1'
 import UserLookup from '@/components/userLookUp'
 import { useStore } from '@/store/useStore'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { use, useEffect } from 'react'
@@ -37,7 +38,7 @@ export default function HomePage() {
 	return (
 		<>
 			<select
-				className="absolute top-3 right-3 z-50
+				className="max-sm:hidden absolute top-3 right-3 z-50
     bg-[#0080ff]
     text-white
      dark:border-gray-600
@@ -142,10 +143,10 @@ export default function HomePage() {
 						>
 							<div className='relative'>
 								<img
-									alt={car.name}
-									className='w-full h-56 object-cover'
-									src={car.image}
-								/>
+  src={car.image}
+  alt={car.name}  
+  className="w-full h-56 object-cover"
+/>
 
 								<div className="absolute top-55 left-0 w-full overflow-hidden z-50 bg-red-500">
   <div className="animate-marquee whitespace-nowrap   text-sm px-2">
