@@ -65,78 +65,74 @@ export default function HomePage() {
 				<BookingForm car={formOpen} onClose={() => setFormOpen(null)} />
 			)}
 			<section className='py-20 bg-white dark:bg-slate-900'>
-				<div className='container mx-auto px-6 text-center'>
-					<h2 className='text-3xl font-bold mb-2 text-gray-900 dark:text-white'>
-						Почему RentAuto.tj?
-					</h2>
-					<p className='text-gray-600 dark:text-gray-400 mb-12'>
-						Ваш надежный партнер в мире премиум автомобилей.
-					</p>
-					<div className='grid grid-cols-1 md:grid-cols-4 gap-8 fade-in'>
-						<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-2 border-[#0080ff]'>
-							<img
-								src='https://st4.depositphotos.com/16122460/40561/i/450/depositphotos_405612086-stock-photo-man-buying-car-shaking-hands.jpg'
-								alt=''
-								className='w-[100%] object-cover h-[150px]'
-							/>
-							<h3 className='text-xl font-bold mb-2  dark:text-white text-[#0080ff]'>
-								Сотрудничество с топовыми прокатчиками
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Мы работает со всеми ведущими компаниями по аренде авто в
-								Таджикистане, чтобы предложить вам лучший выбор.
-							</p>
-						</div>
-						<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
-							<img
-								src='https://assets.avtocod.ru/storage/2017-11/14/mceclip1(4).jpg'
-								alt=''
-								className='w-[100%] object-cover h-[150px]'
-							/>
-							<h3 className='text-xl font-bold mb-2 text-[#0080ff]  dark:text-white'>
-								Большой выбор авто
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								От спорткаров до внедорожников — найдите идеальный автомобиль
-								для любой поездки.
-							</p>
-						</div>
-						<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
-							<img
-								src='https://www.rentacarantalya.biz/webhox/resim/ce66c3d347a6d0833dd8a8873687096a.jpg'
-								alt=''
-								className='w-[100%] object-cover h-[150px]'
-							/>
-							<h3 className='text-xl font-bold mb-2 text-[#0080ff]  dark:text-white'>
-								Онлайн-бронирование за 1 минуту
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Простой и быстрый процесс бронирования, который экономит ваше
-								время.
-							</p>
-						</div>
-						<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
-							<img
-								src='https://img.umedia.uz/wp-content/uploads/2024/11/kontragent-600x340.jpg'
-								alt=''
-								className='w-[100%] object-cover h-[150px]'
-							/>
-							<h3 className='text-xl font-bold mb-2 text-[#0080ff] dark:text-white'>
-								Прозрачные цены
-							</h3>
-							<p className='text-gray-600 dark:text-gray-400'>
-								Никаких скрытых платежей. Вы платите только ту цену, которую
-								видите.
-							</p>
-						</div>
+			<div className='container mx-auto px-6 text-center'>
+				<h2 className='text-3xl font-bold mb-2 text-gray-900 dark:text-white'>
+					{t('whyTitle')}
+				</h2>
+				<p className='text-gray-600 dark:text-gray-400 mb-12'>
+					{t('whySubtitle')}
+				</p>
+				<div className='grid grid-cols-1 md:grid-cols-4 gap-8 fade-in'>
+					<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-2 border-[#0080ff]'>
+						<img
+							src='https://st4.depositphotos.com/16122460/40561/i/450/depositphotos_405612086-stock-photo-man-buying-car-shaking-hands.jpg'
+							alt={t('partnersAlt')}
+							className='w-full object-cover h-[150px] rounded-md'
+						/>
+						<h3 className='text-xl font-bold mb-2 dark:text-white text-[#0080ff]'>
+							{t('partnersTitle')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400'>
+							{t('partnersDesc')}
+						</p>
+					</div>
+					<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
+						<img
+							src='https://assets.avtocod.ru/storage/2017-11/14/mceclip1(4).jpg'
+							alt={t('selectionAlt')}
+							className='w-full object-cover h-[150px] rounded-md'
+						/>
+						<h3 className='text-xl font-bold mb-2 text-[#0080ff] dark:text-white'>
+							{t('selectionTitle')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400'>
+							{t('selectionDesc')}
+						</p>
+					</div>
+					<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
+						<img
+							src='https://www.rentacarantalya.biz/webhox/resim/ce66c3d347a6d0833dd8a8873687096a.jpg'
+							alt={t('bookingAlt')}
+							className='w-full object-cover h-[150px] rounded-md'
+						/>
+						<h3 className='text-xl font-bold mb-2 text-[#0080ff] dark:text-white'>
+							{t('bookingTitle')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400'>
+							{t('bookingDesc')}
+						</p>
+					</div>
+					<div className='p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-light-gray dark:bg-dark-bg border-[#0080ff] border-2'>
+						<img
+							src='https://img.umedia.uz/wp-content/uploads/2024/11/kontragent-600x340.jpg'
+							alt={t('pricingAlt')}
+							className='w-full object-cover h-[150px] rounded-md'
+						/>
+						<h3 className='text-xl font-bold mb-2 text-[#0080ff] dark:text-white'>
+							{t('pricingTitle')}
+						</h3>
+						<p className='text-gray-600 dark:text-gray-400'>
+							{t('pricingDesc')}
+						</p>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 			<MarqueeRentals speed={20} />
 
 			<div className='flex-1 dark:bg-slate-900'>
 				<h1 className='text-4xl font-bold mb-8 text-gray-900 dark:text-white text-center pt-[20px]'>
-					Каталог автомобилей
+					{t('catalogCars')}
 				</h1>
 				<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-[97%] mx-auto pb-20 dark:bg-slate-900'>
 					{cars.map((car, index) => (

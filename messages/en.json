@@ -18,7 +18,33 @@
     "launch": "October 2025 – RentAuto.tj Launch",
     "launchDesc": "Official platform launch with the first 50 cars in the catalog.",
     "future": "Future – New Horizons",
-    "futureDesc": "Plans to expand the fleet, enter new regions, and introduce innovative services."
+    "futureDesc": "Plans to expand the fleet, enter new regions, and introduce innovative services.",
+     "whyTitle": "Why RentAuto.tj?",
+  "whySubtitle": "Your trusted partner in the world of premium cars.",
+  "partnersTitle": "Partnership with Top Rental Companies",
+  "partnersDesc": "We work with all leading car rental companies in Tajikistan to offer you the best selection.",
+  "partnersAlt": "Car rental partners",
+  "selectionTitle": "Wide Selection of Vehicles",
+  "selectionDesc": "From sports cars to SUVs — find the perfect car for any trip.",
+  "selectionAlt": "Diverse car selection",
+  "bookingTitle": "1-Minute Online Booking",
+  "bookingDesc": "A simple and fast booking process that saves your time.",
+  "bookingAlt": "Quick car booking",
+  "pricingTitle": "Transparent Pricing",
+  "pricingDesc": "No hidden fees. You only pay the price you see.",
+  "pricingAlt": "Clear pricing",
+  "catalogCars": "Car Catalog",
+  
+  "rentalBy": "Rental by:",
+  "ownsThisCar": "— owner of this vehicle",
+  "available": "Available",
+  "unavailable": "Unavailable",
+  "bookNow": "Book Now",
+  "fromPrice": "from {price}",
+  "passengers": "{count} passengers",
+  "luggage": "{count} luggage",
+  "doors": "{count} doors"
+
   },
   "SectionHome": {
     "heroTitlePrefix": "Rent a car of any class in ",
@@ -28,5 +54,19 @@
     "carPlaceholder": "Make/Model",
     "datesPlaceholder": "Rental Dates",
     "searchButton": "Find a car"
-  }
+  },
+  "Header": {
+  "home": "Home",
+  "catalog": "Catalog",
+  "about": "About",
+  "companies": "Companies",
+  "contact": "Contact",
+  "aiChat": "🤖 AI Chat",
+  "myBookings": "My Bookings",
+  "login": "Login",
+  "register": "Register",
+  "loggedIn": "Logged In",
+  "lightMode": "☀️ Light",
+  "darkMode": "🌙 Dark"
+}
 }
