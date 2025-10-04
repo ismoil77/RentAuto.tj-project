@@ -1,2 +1,2 @@
-export const API = process.env.NEXT_PUBLIC_API 
+export const API = 'https://a9a312fd6819819d.mokky.dev/' 
 export const API_IMAGE = API + '/images'

@@ -1,16 +1,29 @@
 'use client'
 import useDarkSide from '@/hook/useDarkSide'
+import { useRouter } from '@/i18n/navigation'
 import Link from 'next/link'
+import { useState } from 'react'
 import './headercss.css'
 export default function Navbar() {
 	const [theme, setTheme] = useDarkSide()
-	console.log(theme)
+	const [isOpen, setIsOpen] = useState(false)
+	const toggleMenu = () => setIsOpen(!isOpen)
+	const router = useRouter()
 
+	const navLinks = [
+		{ href: '/', label: 'Главная' },
+		{ href: '/catalog', label: 'Каталог' },
+		{ href: '/about', label: 'О нас' },
+		{ href: '/companies', label: 'Компании' },
+		{ href: '/contact', label: 'Контакты' },
+		{ href: '/aiChat', label: 'AI Chat' },
+		{ href: '/orders', label: 'Мои брони', big: true },
+	]
 	return (
-		<div className='bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark'>
+		<div className='bg-red dark:bg-slate-900  font-display '>
 			<div className='flex flex-col'>
-				<header className='fixed w-full top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm '>
-					<div className='container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3'>
+				<header className=' w-full top-0 z-40 bg-background-light/80  backdrop-blur-sm '>
+					<div className='container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 dark:text-white'>
 						<Link className='flex items-center gap-3' href='/'>
 							{/* <svg
 								className='h-8 w-8 text-[#0c7ff2]'
@@ -45,44 +58,140 @@ export default function Navbar() {
 								О нас
 							</Link>
 							<Link
+								href='/companies'
+								className='text-lg font-semibold hover:text-primary transition-colors'
+							>
+								Компании
+							</Link>
+							<Link
 								className='text-xl font-semibold hover:text-primary transition-colors'
 								href='/contact'
 							>
 								Контакты
 							</Link>
+							<Link
+								className='text-xl font-semibold hover:text-primary transition-colors'
+								href='/orders'
+							>
+								Мои брони
+							</Link>
+							<Link
+								href='/aiChat'
+								className='relative text-lg font-bold 
+             bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 
+             bg-clip-text text-transparent 
+             transition-all duration-300 
+             hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(168,85,247,0.7)]
+             active:scale-95'
+							>
+								🤖 AI Chat
+							</Link>
 						</nav>
 						<div className='flex items-center gap-4 mr-[60px]'>
-							<button className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors'>
-								<span>Войти</span>
+							<button
+								disabled={localStorage.getItem('access_token')||undefined}
+								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+							>
+								<Link
+									href={!localStorage.getItem('access_token') ? 'login' : ''}
+								>
+									<span>
+										{localStorage.getItem('access_token') ? 'LOGGED' : 'LOGIN'}
+									</span>
+								</Link>
+							</button>
+							<button className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors max-sm:hidden'>
+								<Link href={'registration'}>
+									<span>Регистрация</span>
+								</Link>
 							</button>
 							<button
-								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors'
+								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center  hover:bg-blue-600 transition-colors max-sm:hidden'
 								onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 							>
 								{theme}
 							</button>
 
-							<button className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary'>
+							<button
+								onClick={toggleMenu}
+								className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary ml-2'
+							>
 								<svg
 									className='h-6 w-6'
 									fill='none'
-									height='24'
 									stroke='currentColor'
-									strokeLinecap='round'
-									strokeLinejoin='round'
 									strokeWidth='2'
 									viewBox='0 0 24 24'
-									width='24'
 									xmlns='http://www.w3.org/2000/svg'
 								>
-									<line x1='4' x2='20' y1='12' y2='12'></line>
-									<line x1='4' x2='20' y1='6' y2='6'></line>
-									<line x1='4' x2='20' y1='18' y2='18'></line>
+									{isOpen ? (
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M6 18L18 6M6 6l12 12'
+										/>
+									) : (
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M4 6h16M4 12h16M4 18h16'
+										/>
+									)}
 								</svg>
 							</button>
 						</div>
 					</div>
 				</header>
+				<div
+					className={`md:hidden transition-all duration-300 ${
+						isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'
+					}`}
+				>
+					<nav className='flex flex-col bg-background-light dark:bg-slate-900 px-4 pb-4 gap-4 dark:text-white'>
+						{navLinks.map(({ href, label, big }) => {
+							const isActive = router.pathname === href
+							return (
+								<Link
+									key={href}
+									href={href}
+									className={`${
+										big ? 'text-xl' : 'text-lg'
+									} font-semibold transition-all duration-200 relative 
+              hover:text-primary hover:translate-x-1
+              active:scale-95
+              ${
+								isActive
+									? 'text-primary after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary rounded-sm'
+									: 'text-gray-700 dark:text-gray-200'
+							}`}
+								>
+									{label}
+								</Link>
+							)
+						})}
+
+						<Link
+							href='/login'
+							className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 active:scale-95 transition-all'
+						>
+							Войти
+						</Link>
+
+						<Link
+							href='/registration'
+							className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 active:scale-95 transition-all'
+						>
+							Регистрация
+						</Link>
+
+						<button
+							className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 active:scale-95 transition-all'
+							onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+						>
+							{theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+						</button>
+					</nav>
+				</div>
 			</div>
 		</div>
 	)

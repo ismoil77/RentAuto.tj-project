@@ -1,6 +1,9 @@
+import { useTranslations } from 'next-intl'
+
 export default function contact() {
+	const t = useTranslations('SectionHome')
 	return (
-		<div className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200'>
+		<div className='bg-background-light dark:bg-slate-900 font-display text-gray-800 dark:text-gray-200'>
 			<div className='flex flex-col min-h-screen'>
 				<main className='flex-grow'>
 					<section className='relative h-[60vh] min-h-[400px] flex items-center justify-center text-center text-white'>
@@ -95,10 +98,10 @@ export default function contact() {
 						<div className='container mx-auto px-6'>
 							<div className='max-w-4xl mx-auto text-center mb-16'>
 								<h2 className='text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white'>
-									Наша история
+									{t('historyTitle')}
 								</h2>
 								<p className='mt-4 text-lg text-gray-600 dark:text-gray-300'>
-									Путь от идеи до ведущего агрегатора авто в Таджикистане.
+									{t('historySubtitle')}
 								</p>
 							</div>
 							<div className='relative max-w-2xl mx-auto'>
@@ -106,30 +109,26 @@ export default function contact() {
 								<div className='space-y-12'>
 									<div className='relative pl-8 timeline-item'>
 										<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-											Cентябрь 2025 - Рождение идеи
+											{t('idea')}
 										</h3>
 										<p className='mt-2 text-gray-600 dark:text-gray-400'>
-											Возникла идея создания единой платформы для аренды
-											премиальных и спортивных автомобилей в Таджикистане.
+											{t('ideaDesc')}
 										</p>
 									</div>
-									
 									<div className='relative pl-8 timeline-item'>
 										<h3 className='text-xl font-bold text-primary'>
-											Октябрь 2025 - Запуск RentAuto.tj
+											{t('launch')}
 										</h3>
 										<p className='mt-2 text-gray-600 dark:text-gray-400'>
-											Официальный запуск платформы с первыми 50 автомобилями в
-											каталоге.
+											{t('launchDesc')}
 										</p>
 									</div>
 									<div className='relative pl-8 timeline-item'>
 										<h3 className='text-xl font-bold text-gray-900 dark:text-white'>
-											Будущее - Новые горизонты
+											{t('future')}
 										</h3>
 										<p className='mt-2 text-gray-600 dark:text-gray-400'>
-											Планы по расширению автопарка, выходу в новые регионы и
-											внедрению инновационных сервисов.
+											{t('futureDesc')}
 										</p>
 									</div>
 								</div>

@@ -5,6 +5,9 @@ import {routing} from '@/i18n/routing';
 import "./globals.css"
 import Navbar from '@/components/Header'
 import Footer from '@/components/Footer'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +37,18 @@ export default async function RootLayout({ children,params }) {
         <NextIntlClientProvider>
           <Navbar />
           {children}
+            <ToastContainer
+          position="top-right"
+          autoClose={10000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light" // можно "dark"
+        />
           <Footer/>
           </NextIntlClientProvider>
       </body>
