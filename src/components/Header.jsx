@@ -62,7 +62,7 @@ export default function Navbar() {
 							</Link> */}
 						</nav>
 
-						<div className='flex items-center gap-4 mr-[60px]'>
+						<div className='flex items-center gap-4 ml-[15px] mr-[60px]'>
 							<button
 								disabled={!!localStorage.getItem('access_token')}
 								className='bg-[#0c7ff2] text-white text-sm font-bold px-4 h-10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
