@@ -41,14 +41,14 @@ export default function HomePage() {
     bg-[#0080ff]
     text-white
      dark:border-gray-600
-    text-gray-700 dark:text-gray-300
+    dark:text-gray-300
     rounded-md
     py-2.5 pl-3 pr-8
     text-sm
     cursor-pointer
     focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
     appearance-none
-    bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTAuNzA3IDQuMjkzQTEgMSAwIDAgMSAuNzA3IDIuODg3TDEuNDE0IDEuNDY0YTEgMSAwIDAgMSAxLjQxNCAwbDUuNjU3IDUuNjU3YTEgMSAwIDAgMCAxLjQxNCAwTDExLjI5MyAyLjg4N2ExIDEgMCAwIDEgMS40MTQgMS40MTRMNi4zNTQgMTAuNjU3YTEgMSAwIDAgMS0xLjQxNCAwTDAuNzA3IDQuMjkzek1hMSAxIDAgMCAwIDAgMnoiIGZpbGw9IiM2MDY0NkMiLz4KPC9zdmc+')] 
+    bg-[url('https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/arrow-down-icon.png')] 
     bg-no-repeat bg-[length:10px_6px] bg-[right_0.5rem_center]
     transition-colors duration-200
     hover:border-gray-400 dark:hover:border-gray-500"

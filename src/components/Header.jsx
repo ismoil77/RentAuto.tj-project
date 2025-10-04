@@ -91,7 +91,7 @@ export default function Navbar() {
 
 							<button
 								onClick={toggleMenu}
-								className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary ml-2'
+								className='md:hidden p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary max-sm:mr-2 '
 							>
 								<svg
 									className='h-6 w-6'
